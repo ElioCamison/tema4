@@ -1,14 +1,15 @@
 import java.util.Arrays;
 
-public class QuadraMagic2 {
+public class QuadratMagic2 {
 
-    public static void main(String[] args) {
-        imprimeix(5);
+    private int dimension;
+
+    public QuadratMagic2(int i) {
     }
+
 
     static void imprimeix(int n) {
         int[][] ar = new int[n][n];
-        int posI = 0;
 
         for (int i = 1, contI = 0; i < ar.length; i++, contI++) {
             for (int j = 1, cont = 0; j < ar[i].length; j++,cont++) {
@@ -19,7 +20,6 @@ public class QuadraMagic2 {
                 //sumas
                 ar[i][j] = ar[i][cont] + ar[contI][j];
             }
-            posI++;
         }
         System.out.print(Arrays.deepToString(ar));
     }
